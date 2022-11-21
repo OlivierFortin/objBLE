@@ -7,7 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 
- let manager = new BleManager();
+let manager = new BleManager();
 
 function HomeScreen({navigation}) {
   const [devices, setDevices] = useState([]);
@@ -69,7 +69,7 @@ function DeviceScreen({route,navigation}) {
     device.connect()
       .then((ble) => {
         return ble.discoverAllServicesAndCharacteristics()
-      }).
+      });
   }
 
   return (
